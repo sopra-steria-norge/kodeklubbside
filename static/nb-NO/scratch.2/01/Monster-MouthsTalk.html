@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scratchkort - Munn som prater — Kodeklubben</title>
+
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/lesson.css">
+  <link rel="stylesheet" href="/css/scratch.css">
+</head>
+<body>
+<header>
+<div class="level">Nivå 4</div>
+<div class="title">Scratchkort - Munn som prater</div>
+<div class="logo"><img src="/img/ccno_logo.png"/></div>
+</header>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.codeclub.org.uk/">Code Club (http://www.codeclub.org.uk/)</a> i England, og oversatt til norsk av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li>For å få monsteret til å snakke, kan du bruke <code class="blockpurple">si</code>-kloss.</li>
+</ul>
+<p><img src="7b868971ed85346fcbce428ebe87fa0806ff9b70.png" alt="når [mellomrom v] trykkes
+si [Hallo!] i (2) sekunder" /></p>
+<ul>
+<li>For å gjøre det litt mere imponerende, kan du få monsteret til å <strong>åpne</strong> og <strong>lukke munnen</strong> mens det prater. For å gjøre dette, rediger figuren som inneholder munnen - opprett en ny <code class="blockpurple">drakt</code> som har lukket munn. Ved å bytte mellom de to, kan du animere at munnen åpner og lukker seg.</li>
+</ul>
+<p><img src="4897fa43ba607bfff72fa522b936e368a3240354.png" alt="gjenta (8) ganger
+    vent (0.1) sekunder 
+    bytt drakt til [munnLukket v]
+    vent (0.1) sekunder 
+    bytt drakt til [munnÅpen v]
+slutt" /></p>
+<ul>
+<li>For å koble de to sammen, få <code class="blockpurple">si</code>-klossen til å sende en melding, som den andre klossen kan reagere på.</li>
+</ul>
+<p><img src="c10e5123a2373192c4aa4f9f127be9c6aa7f082e.png" alt="når [mellomrom v] trykkes
+send melding [snakk v]
+si [Hallo!] i (2) sekunder
+
+når jeg mottar [snakk v]
+gjenta (8) ganger
+    vent (0.1) sekunder
+    bytt drakt til [munnLukket v]
+    vent (0.1) sekunder
+    bytt drakt til [munnÅpen v]
+slutt" /></p>
+<ul>
+<li>For å gjøre det litt mer fleksibelt, bruk en variabel for å kontrollere <code class="blockorange">snakketid</code> hvor lenge monsteret sier noe, og for å kontrollere hvor mange ganger animasjonsløkken er gjentatt.</li>
+</ul>
+<p><img src="08ce89d8adea0041137117aea35d8e301180fc88.png" alt="når [mellomrom v] trykkes
+sett [snakketid v] til (2)
+send melding [snakk v]
+si [Hallo!] i (snakketid) sekunder
+
+når [a v] trykkes
+sett [snakketid v] til (4)
+send melding [snakk v]
+si [Noe litt lengre] i (snakketid) sekunder
+
+når jeg mottar [snakk v]
+gjenta ((snakketid) * (4)) ganger
+    vent (0.1) sekunder 
+    bytt til drakt [munnLukket v]
+    vent (0.1) sekunder
+    bytt til drakt [munnÅpen v]
+slutt" /></p>
+<p><strong>(Merk at vi multipliserer snakketid med 4 for å være sikkre på at løkken gjentas nok ganger)</strong></p>
+<ul>
+<li>Du kan også få monsteret ditt til å si lyder ved å bruke en av lydklossene. Husk å importere lydene i <code class="blocklightgrey">Lyd</code>.</li>
+</ul>
+<p><img src="2d202b32f80a49a3aa48c200ffd5b82292e1c621.png" alt="når jeg mottar [snakk v]
+spill lyden [Screech v]" /></p>
+<p><strong>Prøv å legge til lyder til andre hendelser, du kan bruke en skummel svevende lyd for et spøkelse som flyr rundt på skjermen! Har du mikrofon på datamaskinen kan du ta opp dine egne lyder, overrask de andre ved å ta opp et høyt monster BRØØØØØØØØØL!!!</strong></p>
+</section>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.codeclub.org.uk/">Code Club (http://www.codeclub.org.uk/)</a> i England, og oversatt til norsk av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+</body>
+</div>
+</html>
